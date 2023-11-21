@@ -1,0 +1,79 @@
+﻿#Big Bear Background
+app.background = gradient('yellow', 'orange', 'red', 'brown','purple',)
+
+
+
+
+#Snout
+
+
+Oval(70, 200, 70, 45)
+Circle(42, 198, 3, fill='white')
+#Head
+Oval(100, 183, 90, 80, fill='black')
+
+
+
+
+#Ear
+Oval(84, 158, 20 ,50, rotateAngle=-10)
+Oval(118, 145, 20 ,30, rotateAngle=10)
+
+
+#BackLegs
+Oval(280,233,40,90, fill='gray', rotateAngle=-10, border='black', borderWidth=5)
+Oval(270,273,40,20, fill='gray', border='black', borderWidth=5)
+
+
+#FrontLegs
+Oval(115,230,40,90, fill='gray', rotateAngle=10, border='black', borderWidth=5)
+Oval(95,270,40,20, fill='gray', border='black', borderWidth=5)
+
+
+
+
+#Neck
+Oval(150,150, 70, 40, rotateAngle=-8)
+
+
+#Torso
+Oval(160, 195, 140, 100)
+Oval(220, 182, 120, 100, rotateAngle=15)
+Oval(265, 185, 70 ,100, rotateAngle=-15)
+
+
+
+
+Oval(145,240,40,90, rotateAngle=-15)
+Oval(145,275,40,20, rotateAngle=-10)
+
+
+
+
+Oval(240,240,40,90, rotateAngle=-15)
+Oval(240,275,40,20, rotateAngle=-10)
+#Tail
+Oval(290,170,30,30, fill=None, border='black', borderWidth=5)
+
+
+#Eye
+Oval(110, 175, 10, 10, fill='white')
+
+
+#Outlines
+Oval(190, 177, 30, 50, fill='white', rotateAngle=-15)
+Oval(190, 170, 20, 40, rotateAngle=-15)
+Oval(200, 167, 20, 40, fill='white', rotateAngle=-15)
+Oval(200, 160, 10, 30, rotateAngle=-15)
+Line(260, 160, 238, 200, fill='white', lineWidth=3)
+Circle(238, 194, 8)
+Line(237, 164, 264, 186, lineWidth=6)
+Line(150, 150, 131, 197, lineWidth=3, fill='white')
+Line(150, 150, 165, 166, lineWidth=3, fill='white')
+Line(165, 166, 131, 197, lineWidth=3, fill='white')
+
+
+
+
+#sun
+Star(320,70,60,200, fill=gradient('yellow', 'red'))

@@ -1,0 +1,154 @@
+﻿#Background
+Rect(0,0, 400, 400, fill='peachpuff')
+RegularPolygon(43, 48, 20, 5, fill=gradient('tan', 'bisque'))
+RegularPolygon(333, 332, 20, 8, fill=gradient('tan', 'bisque'))
+RegularPolygon(287, 239, 34, 18, fill=gradient('tan', 'bisque'))
+RegularPolygon(322, 113, 17, 4, fill=gradient('tan', 'bisque'))
+RegularPolygon(70, 329, 50, 13, fill=gradient('tan', 'bisque'))
+RegularPolygon(31, 236, 15, 9, fill=gradient('tan', 'bisque'))
+RegularPolygon(100, 143, 24, 7, fill=gradient('tan', 'bisque'))
+
+
+#Seagrass
+Circle(95, 205, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(96, 206, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(97, 203, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(94, 207, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(91, 206, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(93, 202, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(99, 208, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(96, 204, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(97, 208, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(94, 206, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(93, 201, 3, fill=gradient('green', 'darkOliveGreen'))
+
+
+Circle(97, 246, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(96, 248, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(97, 250, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(94, 243, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(91, 244, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(93, 242, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(99, 240, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(96, 246, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(97, 245, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(94, 232, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(93, 241, 3, fill=gradient('green', 'darkOliveGreen'))
+
+
+Circle(197, 45, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(196, 47, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(197, 50, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(194, 48, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(191, 42, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(193, 46, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(199, 48, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(196, 46, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(197, 41, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(194, 40, 3, fill=gradient('green', 'darkOliveGreen'))
+Circle(193, 45, 3, fill=gradient('green', 'darkOliveGreen'))
+
+
+
+
+
+
+
+
+#Legs
+Line(165, 178, 148, 170, fill=gradient('black', 'darkSlateGray', 'black', start='bottom'), lineWidth=10)
+Line(148, 170, 129, 160, fill=gradient('black', 'darkSlateGray', 'black', start='left'), lineWidth=6)
+Line(129, 160, 114, 148, fill=gradient('black', 'darkSlateGray', 'black', start='left'), lineWidth=6)
+Line(114, 148, 97, 126, fill=gradient('black', 'darkSlateGray', 'black', start='left'), lineWidth=6)
+Oval(95, 121, 10, 15, fill=gradient('black', 'darkSlateGray', 'black', start='left'), rotateAngle=-20)
+Line(163, 194, 144, 197, fill=gradient('black', 'darkSlateGray', 'black', start='left'), lineWidth=10)
+Line(144, 197, 130, 200, fill=gradient('black', 'darkSlateGray', 'black', start='left'), lineWidth=6)
+Line(130, 200, 114, 205, fill=gradient('black', 'darkSlateGray', 'black', start='left'), lineWidth=6)
+Line(114, 205, 99, 213, fill=gradient('black', 'darkSlateGray', 'black', start='left'), lineWidth=6)
+Oval(93, 216, 10, 15, fill=gradient('black', 'darkSlateGray', 'black', start='left'), rotateAngle=55)
+Line(160, 214, 149, 220, fill=gradient('black', 'darkSlateGray', 'black', start='left'), lineWidth=10)
+Line(149, 220, 126, 237, fill=gradient('black', 'darkSlateGray', 'black', start='left'), lineWidth=6)
+Line(126, 237, 108, 254, fill=gradient('black', 'darkSlateGray', 'black', start='left'), lineWidth=6)
+Line(108, 254, 94, 274, fill=gradient('black', 'darkSlateGray', 'black', start='left'), lineWidth=6)
+Line(233, 178, 250, 169, fill=gradient('black', 'darkSlateGray', 'black', start='left'), lineWidth=10)
+Line(250, 169, 271, 160, fill=gradient('black', 'darkSlateGray', 'black', start='left'), lineWidth=6)
+Line(271, 160, 293, 146, fill=gradient('black', 'darkSlateGray', 'black', start='left'), lineWidth=6)
+Line(293, 146, 312, 128, fill=gradient('black', 'darkSlateGray', 'black', start='left'), lineWidth=6)
+Line(239, 198, 256, 195, fill=gradient('black', 'darkSlateGray', 'black', start='left'), lineWidth=10)
+Line(256, 195, 276, 193, fill=gradient('black', 'darkSlateGray', 'black', start='left'), lineWidth=6)
+Line(276, 193, 302, 194, fill=gradient('black', 'darkSlateGray', 'black', start='left'), lineWidth=6)
+Line(302, 194, 330, 200, fill=gradient('black', 'darkSlateGray', 'black', start='left'), lineWidth=6)
+Line(239, 217, 252, 222, fill=gradient('black', 'darkSlateGray', 'black', start='left'), lineWidth=10)
+Line(252, 222, 266, 231, fill=gradient('black', 'darkSlateGray', 'black', start='left'), lineWidth=6)
+Line(266, 231, 283, 244, fill=gradient('black', 'darkSlateGray', 'black', start='left'), lineWidth=6)
+Line(283, 244, 298, 253, fill=gradient('black', 'darkSlateGray', 'black', start='left'), lineWidth=6)
+Line(298, 253, 307, 273, fill=gradient('black', 'darkSlateGray', 'black', start='left'), lineWidth=6)
+Oval(90, 280, 10, 15, fill=gradient('black', 'darkSlateGray', 'black', start='left'), rotateAngle=30)
+Oval(316, 123, 10, 15, fill=gradient('black', 'darkSlateGray', 'black', start='left'), rotateAngle=33)
+Oval(336, 201, 10, 15, fill=gradient('black', 'darkSlateGray', 'black', start='left'), rotateAngle=100)
+Oval(309, 279, 10, 15, fill=gradient('black', 'darkSlateGray', 'black', start='left'), rotateAngle=-20)
+#Body
+Oval(200, 210, 80, 140, fill=gradient('black', 'darkSlateGray', 'black', start='left'), border='darkred', borderWidth=1)
+#Arms
+Polygon(182, 158, 159, 150, 149, 151, 146, 143, 159, 127, 177, 139, fill=gradient('black', 'darkSlateGray', 'black', start='top-right'), border='darkred', borderWidth=1, rotateAngle=30)
+Polygon(227, 160, 240, 150, 250, 151, 253, 143, 240, 127, 213, 139, fill=gradient('black', 'darkSlateGray', 'black', start='top-left'), border='darkred', borderWidth=1, rotateAngle=20)
+Polygon(148, 135, 139, 129, 136, 116, 145, 113, 147, 95, 160, 95, 167, 127, fill=gradient('black', 'darkSlateGray', 'black', start='top-right'), border='darkred', borderWidth=1)
+Polygon(253, 149, 267, 134, 275, 123, 266, 113, 273, 95, 254, 95, 246, 129, fill=gradient('black', 'darkSlateGray', 'black', start='top-left'), border='darkred', borderWidth=1)
+#Claws
+Oval(171, 58, 60, 100, fill=gradient('black', 'darkSlateGray', 'black', start='left'), border='darkred', borderWidth=1, rotateAngle=30)
+Oval(196, 47, 40, 60, fill='peachpuff', rotateAngle=30)
+Oval(197, 50, 30, 70, fill=gradient('black', 'darkSlateGray', 'black', start='left'), border='darkred', borderWidth=1, rotateAngle=30)
+Rect(186, 12, 14, 56, fill='peachpuff', rotateAngle=30)
+Oval(263, 53, 70, 110, fill=gradient('black', 'darkSlateGray', 'black', start='left'), border='darkred', borderWidth=1)
+Oval(245, 32, 50, 70, fill='peachpuff', rotateAngle=30)
+Polygon(229, 65, 225, 55, 226, 44, 229, 35, 232, 27, 235, 19, 240, 10, 243, 6, 246, 13, 244, 20, 240, 31, 243, 41, 245, 49, 247, 56, 252, 62, 240, 65, fill=gradient('black', 'darkSlateGray', start='left'), )
+#Food Sea Urchin
+Star(191, 42, 30, 250, roundness=20)
+#Tail Flap
+Oval(232, 356, 35, 40, fill=gradient('black', 'darkSlateGray', 'black', start='left'), border='darkred', borderWidth=1, rotateAngle=60)
+Oval(168, 356, 35, 40, fill=gradient('black', 'darkSlateGray', 'black', start='left'), border='darkred', borderWidth=1, rotateAngle=60)
+Oval(200, 360, 50, 50, fill=gradient('black', 'darkSlateGray', 'black', start='left'), border='darkred', borderWidth=1)
+Oval(180, 360, 30, 40, fill=gradient('black', 'darkSlateGray', 'black', start='left'), border='darkred', borderWidth=1, rotateAngle=20)
+Oval(220, 360, 30 ,40, fill=gradient('black', 'darkSlateGray', 'black', start='left'), border='darkred', borderWidth=1, rotateAngle=-20)
+#Tail Stem
+Oval(200, 340, 75, 30, fill=gradient('black', 'darkSlateGray', 'black', start='left'), border='darkred', borderWidth=1)
+Oval(200, 320, 75, 30, fill=gradient('black', 'darkSlateGray', 'black', start='left'), border='darkred', borderWidth=1)
+Oval(200, 300, 75, 30, fill=gradient('black', 'darkSlateGray', 'black', start='left'), border='darkred', borderWidth=1)
+Oval(200, 280, 75, 30, fill=gradient('black', 'darkSlateGray', 'black', start='left'), border='darkred', borderWidth=1)
+Oval(200, 260, 75, 30, fill=gradient('black', 'darkSlateGray', 'black', start='left'), border='darkred', borderWidth=1)
+Oval(200, 240, 75, 30, fill=gradient('black', 'darkSlateGray', 'black', start='left'), border='darkred', borderWidth=1)
+#Head
+Oval(200, 130, 40, 50, fill=gradient('black', 'darkSlateGray', 'black', start='left'), border='darkred', borderWidth=1)
+Oval(200, 160, 55, 80, fill=gradient('black', 'darkSlateGray', 'black', start='left'), border='darkred', borderWidth=1)
+Polygon(172, 160, 175, 173, 226, 173, 227, 160, fill='darkRed')
+Circle(181, 168, 5, border='darkred', borderWidth=1)
+Circle(219, 168, 5, border='darkred', borderWidth=1)
+Rect(181, 163, 38, 10, fill=gradient('black', 'darkSlateGray', 'black', start='left'), border='darkred', borderWidth=1)
+Oval(192, 111, 8, 16, fill='white', border='darkred', borderWidth=0.5)
+Oval(208, 111, 8, 16, fill='white', border='darkred', borderWidth=0.5)
+Circle(192, 115, 4, fill=rgb(38, 26, 26))
+Circle(208, 115, 4, fill=rgb(38, 26, 26))
+Line(192, 111, 192, 101, fill=rgb(40, 40, 40), lineWidth=4)
+Line(208, 111, 208, 101, fill=rgb(40, 40, 40), lineWidth=4)
+#Whisker
+Line(192, 101, 176, 90, fill=rgb(40, 40, 40), lineWidth=2)
+Line(176, 90, 160, 77, fill=rgb(40, 40, 40), lineWidth=2)
+Line(160, 77, 155, 67, fill=rgb(40, 40, 40), lineWidth=2)
+Line(155, 67, 143, 53, fill=rgb(40, 40, 40), lineWidth=2)
+Line(143, 53, 142, 33, fill=rgb(40, 40, 40), lineWidth=2)
+Line(142, 33, 142, 0, fill=rgb(40, 40, 40), lineWidth=2)
+#Other Whisker
+Line(208, 101, 214, 81, fill=rgb(40, 40, 40), lineWidth=2)
+Line(214, 81, 244, 69, fill=rgb(40, 40, 40), lineWidth=2)
+Line(244, 69, 252, 60, fill=rgb(40, 40, 40), lineWidth=2)
+Line(252, 60, 247, 46, fill=rgb(40, 40, 40), lineWidth=2)
+Line(247, 46, 233, 34, fill=rgb(40, 40, 40), lineWidth=2)
+Line(233, 34, 223, 24, fill=rgb(40, 40, 40), lineWidth=2)
+Line(223, 24, 229, 14, fill=rgb(40, 40, 40), lineWidth=2)
+Line(229, 14, 249, 0, fill=rgb(40, 40, 40), lineWidth=2)
+
+
+
+
+#Water
+Rect(0, 0, 400, 400, fill=gradient('deepskyblue', 'aqua', 'cadetblue', start='top-left'), opacity=25)

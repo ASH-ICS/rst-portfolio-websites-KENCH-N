@@ -1,0 +1,78 @@
+﻿#background
+app.background = 'midnightBlue'
+#moon
+Circle(55, 55, 125, fill=gradient ('moccasin', 'peachPuff', 'paleGoldenrod', 'khaki'))
+Circle(120, 44, 85, fill='midnightBlue')
+#Grass
+Rect(0, 320, 400, 80, fill='darkGreen')
+#Reaper
+Oval(338, 189, 45, 60)
+Oval(338, 195, 20, 30, fill=rgb(26, 28, 43))
+#Cape
+Rect(335, 210, 40, 80, rotateAngle=-25)
+Polygon(390, 277, 382, 275, 376, 272, 366, 270, 368, 279, 357, 278, 355, 288, 343, 277, 342, 299, 365, 299, 386, 286, fill='midnightBlue')
+Oval(337, 150, 40, 30, fill='midnightBlue')
+#Scythe
+scythe = Line(279, 320, 279, 221, lineWidth=5, fill='chocolate')
+scytheBlade = Oval(265, 212, 50, 30, fill='ghostWhite', rotateAngle=2)
+scytheWhite = Oval(256, 224, 40, 30, rotateAngle=-10, fill='midnightBlue')
+#Hand
+Line(327, 232, 306, 244, fill='ghostWhite')
+Line(331, 235, 308, 245, fill='ghostWhite')
+Line(306, 244, 286, 248, fill='ghostWhite')
+Line(308, 245, 288, 248, fill='ghostWhite')
+Circle(281, 248, 3, fill='ghostWhite')
+Line(364, 231, 381, 238, fill='ghostWhite')
+Line(364, 227, 381, 236, fill='ghostWhite')
+Line(381, 238, 393, 243, fill='ghostWhite')
+Line(381, 236, 393, 243, fill='ghostWhite')
+#Eyes
+RegularPolygon(332, 194, 3, 5, fill='red')
+RegularPolygon(344, 194, 3, 5, fill='red')
+
+
+
+
+#Jack o lanturn
+Oval(60, 280, 50, 90, border='black', borderWidth=2, fill=gradient ('darkOrange', 'orange', 'orangeRed'))
+Oval(75, 280, 50, 90, border='black', borderWidth=2, fill=gradient ('darkOrange', 'orange', 'orangeRed'))
+Oval(90, 280, 50, 90, border='black', borderWidth=2, fill=gradient ('darkOrange', 'orange', 'orangeRed'))
+Oval(150, 280, 50, 90, border='black', borderWidth=2, fill=gradient ('darkOrange', 'orange', 'orangeRed'))
+Oval(135, 280, 50, 90, border='black', borderWidth=2, fill=gradient ('darkOrange', 'orange', 'orangeRed'))
+Oval(120, 280, 50, 90, border='black', borderWidth=2, fill=gradient ('darkOrange', 'orange', 'orangeRed'))
+Oval(105, 280, 50, 90, border='black', borderWidth=2, fill=gradient ('darkOrange', 'orange', 'orangeRed'))
+Polygon(77, 255, 58, 269, 90, 275)
+Polygon(131, 256, 152, 269, 122, 275)
+Polygon(105, 280, 97, 290, 112, 290)
+Polygon(58, 287, 77, 302, 97, 306, 118, 306, 137, 302, 155, 287, 132, 295, 120, 298, 114, 297, 104, 297, 90, 297, 77, 292, 67, 291)
+Polygon(110, 238, 112, 222, 98, 210, 91, 213, 101, 222, 97, 239, border='black', borderWidth=1, fill='darkGreen')
+
+
+bigLine = Line(101, 193, 103, 326, fill = 'midnightBlue', visible = False, lineWidth = 50)
+bigStar = Star(101, 275, 60, 8, fill='midnightBlue', visible = False)
+def onMousePress (x, y):
+    
+        scythe.rotateAngle -= 25
+        scytheBlade.rotateAngle -= 20
+        scytheWhite.rotateAngle -= 20
+        scytheBlade.centerX -= 26
+        scytheWhite.centerX -= 26
+        scytheBlade.centerY += 10
+        scytheWhite.centerY += 10
+        bigLine.visible = True
+        bigStar.visible = True
+        pass
+
+
+    
+def onMouseRelease (x, y):
+        scythe.rotateAngle += 25
+        scytheBlade.rotateAngle += 20
+        scytheWhite.rotateAngle += 20
+        scytheBlade.centerX += 26
+        scytheWhite.centerX += 26
+        scytheBlade.centerY -= 10
+        scytheWhite.centerY -= 10
+        bigLine.visible = False
+        bigStar.visible = False
+        pass
