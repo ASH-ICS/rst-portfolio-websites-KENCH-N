@@ -1,0 +1,240 @@
+﻿tracker = Circle(5, 5, 5, fill = 'red', opacity = 40, visible = False)
+togo = Circle(0, 0 , 1, opacity = 0)
+tracker.xv = 0
+tracker.yv = 0
+
+
+
+
+velocityTracker = Label(tracker.xv, 358, 374, visible=False)
+velocityTrackerY = Label(tracker.yv, 358, 364, visible=False)
+
+
+
+
+maze = Group(
+        Rect(160, 40, 80, 20),
+        Rect(160, 40, 20, 60),
+        Rect(0, -10, 400, 10),
+        Rect(-10, 0, 10, 400),
+        Rect(0, 400, 400, 10),
+        Rect(400, 0, 10, 400),
+        Line(170, 90, 120, 120, lineWidth = 10),
+        Line(125, 120, 66, 120, lineWidth = 10),
+        Line(66, 120, 25, 165, lineWidth = 10),
+        Line(25, 160, 25, 225, lineWidth = 10),
+        Line(25, 225, 55, 268, lineWidth = 10),
+        Line(55, 268, 58, 315, lineWidth = 10),
+        Line(58, 315, 56, 365, lineWidth = 10),
+        Line(56, 365, 90, 371, lineWidth = 10),
+        Line(90, 371, 87, 326, lineWidth = 10),
+        Line(87, 326, 84, 288, lineWidth = 10),
+        Line(102, 260, 66, 228, lineWidth = 10),
+        Line(129, 358, 211, 347, lineWidth = 10),
+        Line(211, 347, 218, 305, lineWidth = 10),
+        Line(130, 273, 218, 305, lineWidth = 10),
+        Line(66, 228, 134, 218, lineWidth = 10),
+        Line(66, 228, 72, 165, lineWidth = 10),
+        Line(72, 165, 127, 136, lineWidth = 10),
+        Line(127, 136, 185, 109, lineWidth = 10),
+        Line(185, 109, 183, 167, lineWidth = 10),
+        Line(203, 176, 246, 147, lineWidth = 10),
+        Line(160, 141, 118, 176, lineWidth = 10),
+        Line(118, 176, 131, 192, lineWidth = 10),
+        Line(246, 147, 213, 117, lineWidth = 10),
+        Line(131, 192, 97, 187, lineWidth = 10),
+        Line(213, 117, 203, 98, lineWidth = 10),
+        Line(183, 167, 163, 213, lineWidth = 10),
+        Line(163, 213, 191, 271, lineWidth = 10),
+        Line(191, 271, 237, 289, lineWidth = 10),
+        Line(203, 176, 213, 243, lineWidth = 10),
+        Line(213, 243, 263, 260, lineWidth = 10),
+        Line(120, 120, 105, 59, lineWidth = 10),
+        Line(105, 59, 133, 14, lineWidth = 10),
+        Line(105, 59, 79, 15, lineWidth = 10),
+        Line(66, 120, 82, 71, lineWidth = 10),
+        Line(63, 48, 28, 88, lineWidth = 10),
+        Line(53, 137, 35, 103, lineWidth = 10),
+        Line(79, 15, 28, 23, lineWidth = 10),
+        Line(55, 268, 23, 301, lineWidth = 10),
+        Line(211, 347, 287, 374, lineWidth = 10),
+        Line(240, 60, 268, 95, lineWidth = 10),
+        Line(238, 327, 249, 293, lineWidth = 10),
+        Line(268, 95, 266, 151, lineWidth = 10),
+        Line(220, 169, 318, 175, lineWidth = 10),
+        Line(318, 175, 295, 207, lineWidth = 10),
+        Line(295, 207, 240, 198, lineWidth = 10),
+        Line(240, 198, 283, 236, lineWidth = 10),
+        Line(283, 236, 287, 280, lineWidth = 10),
+        Line(287, 280, 265, 319, lineWidth = 10),
+        Line(265, 319, 297, 347, lineWidth = 10),
+        Line(266, 151, 321, 175, lineWidth = 10),
+        Line(240, 40, 261, 15, lineWidth = 10),
+        Line(261, 15, 326, 26, lineWidth = 10),
+        Line(326, 26, 312, 66, lineWidth = 10),
+        Line(312, 66, 286, 68, lineWidth = 10),
+        Line(270, 103, 311, 113, lineWidth = 10),
+        Line(311, 113, 335, 143, lineWidth = 10),
+        Line(321, 175, 340, 200, lineWidth = 10),
+        Line(367, 211, 400, 227, lineWidth = 10),
+        Line(400, 227, 385, 339, lineWidth = 10),
+        Line(385, 339, 343, 304, lineWidth = 10),
+        Line(349, 263, 364, 284, lineWidth = 10),
+        Line(349, 263, 287, 258, lineWidth = 10),
+        Line(367, 211, 321, 228, lineWidth = 10),
+        Line(159, 0, 140, 51, lineWidth = 10),
+        Line(326, 26, 375, 21, lineWidth = 10),
+        Line(400, 106, 350, 121, lineWidth = 10),
+        Line(364, 189, 377, 117, lineWidth = 10),
+        Line(377, 117, 356, 56, lineWidth = 10),
+        Line(364, 324, 339, 362, lineWidth = 10),
+        Line(321, 400, 320, 373, lineWidth = 10),
+        visible = False
+        )
+
+
+app.pauseGame = True
+app.pauseGameScreen = Group(
+        Rect(0, 0, 400, 400, fill='white', opacity = 60),
+        Line(160, 160, 160, 240, lineWidth = 10, fill = 'white'),
+        Line(240, 160, 240, 240, lineWidth = 10, fill='white'),
+        visible=False
+        )
+    
+
+
+    
+app.admin = False    
+    
+    
+app.startGameYes = False
+
+
+if app.startGameYes == True:
+        app.background = 'skyBlue'
+
+
+
+
+app.end = Rect(180, 60, 50, 30, fill='blueviolet', opacity = 50, visible = True)
+
+
+app.ifend = False
+
+
+app.screen = Group(
+        Rect(0, 0, 400, 400, fill='chartreuse', opacity = 50),
+        Label('YOU WIN!!!!', 200, 200, size=40, bold=True),
+        visible = False
+        )
+    
+app.lose = Group(
+        Rect(0, 0, 400, 400, fill='red'),
+        Label('YOU LOSE', 200, 200, size= 40, bold=True, italic = True),
+        Label('Click run again to retry', 200, 255, size=15),
+        visible = False
+        )
+    
+    
+    
+    
+startGame = Group(
+        Label('MAZE GAME', 200, 30, size = 20, bold=True, italic=True),
+        Label('Get to the end (purple) without touching the edge of the map or the maze walls', 200, 80, size=11),
+        Label('Controls:', 200, 100),
+        Label('D for debug menu (velocity) A to hide', 200, 120),
+        Label('Character will move with the mouse', 200, 140),
+        Label('though it is capped at a certain speed and will slowdown', 200, 150),
+        Label('as it approaches the mouse', 200, 160),
+        Label('P to pause game, O to unpause', 200, 180),
+        Label('Click the green arrow to start the game', 200, 200),
+        Label('DISCLAIMER: ONCE YOU UNPAUSE THE GAME', 200, 220),
+        Label('THE PLAYER WILL AUTOMATICALLY GO TO CURSOR', 200, 235),
+        Label('MAKE SURE TO NOT PUT YOUR CURSOR NEAR THE WALLS', 200, 250),
+        Line(300, 337, 378, 337, arrowEnd = True, lineWidth = 10, fill='green'),
+        Label('R to remove wall collision', 80, 360),
+        visible=True
+        )
+    
+continueArrow = Line(300, 337, 378, 337, arrowEnd = True, lineWidth = 10, fill='green', visible=True)
+    
+def onStep():
+ 
+        if app.startGameYes == True:
+            app.end.visible = True
+            if app.pauseGame == False:
+                tracker.xv = togo.centerX - tracker.centerX
+                tracker.yv = togo.centerY - tracker.centerY
+                tracker.centerX += tracker.xv / 15
+                tracker.centerY += tracker.yv / 15
+                if tracker.xv > 70:
+                    tracker.xv = 70
+                if tracker.xv < -70:
+                    tracker.xv = -70
+                if tracker.yv > 70:
+                    tracker.yv = 70
+                if tracker.yv < -70:
+                    tracker.yv = -70
+                velocityTracker.value = tracker.xv
+                velocityTrackerY.value = tracker.yv
+                app.pauseGameScreen.visible = False
+                if app.end.hitsShape(tracker):
+                    app.ifend = True
+                    app.screen.visible = True
+                if app.admin == False:
+                    if maze.hitsShape(tracker):
+                        tracker.visible = False
+                        app.lose.visible = True
+                if app.ifend == True:
+                    app.admin = True
+            if app.pauseGame == True:
+                app.pauseGameScreen.visible = True
+        if app.startGameYes == False:
+            app.end.visible = False
+def onMouseMove (x, y):
+        togo.centerX = x
+        togo.centerY = y
+                
+                
+            
+
+
+def onKeyPress (key):
+        if 'd' in key:
+            velocityTracker.value = tracker.xv
+            velocityTracker.visible = True
+            velocityTrackerY.value = tracker.yv
+            velocityTrackerY.visible = True
+            
+        if 'a' in key:
+            velocityTracker.visible = False
+            velocityTrackerY.visible = False
+    
+    
+        if app.startGameYes == True:
+            if 'p' in key:
+                app.pauseGame = True
+    
+            if 'o' in key:
+                app.pauseGame = False
+    
+            if 'r' in key:
+                app.admin = True
+            
+            
+            
+def onMousePress (mouseX, mouseY):
+        if continueArrow.contains(mouseX, mouseY):
+            app.startGameYes = True
+            
+        if app.startGameYes == False:
+            app.background = 'white'
+            continueArrow.visible=True
+            startGame.visible = True
+    
+        if app.startGameYes == True:
+            app.background = 'skyBlue'
+            tracker.visible = True
+            maze.visible = True
+            startGame.visible = False
+            continueArrow.visible = False

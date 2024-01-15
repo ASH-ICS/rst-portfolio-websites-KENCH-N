@@ -1,0 +1,121 @@
+﻿#Background
+app.background = gradient('darkGreen', 'green', 'red', 'white', 'darkRed', start='top-left')
+Rect(0, 320, 400, 80, fill='forestgreen')
+#Tree
+treeStump = Rect(175,280,50,40, fill=gradient('brown', 'sandyBrown', 'brown', start='left'))
+Polygon(80,280,320,280,200,160, fill='green')
+Polygon(100,220,300,220,200,120, fill='green')
+Polygon(120,170,280,170,200,80, fill='green')
+Polygon(140,110,260,110,200,40, fill='green' )
+Polygon(160,110,180,120,200,110, fill='darkGreen')
+Polygon(200,110,220,120,240,110, fill='darkGreen')
+Polygon(120,170,160,180,200,160, fill='darkGreen')
+Polygon(200,160,240,180,280,170, fill='darkGreen')
+Polygon(100,220,140,230,200,220, fill='darkGreen')
+Polygon(200,220,260,230,300,220, fill='darkGreen')
+Polygon(80,280,120,290,175,280, fill='darkGreen')
+Polygon(175,280,200,290,225,280, fill='darkGreen')
+Polygon(225,280,280,290,320,280, fill='darkGreen')
+#Ornament
+Star(200, 30, 20, 5, fill=gradient( 'yellow', 'gold'))
+Star(200, 30, 10, 4, fill='gold')
+ornament1 = Circle(230,145,5,fill='crimson', opacity = 50)
+ornament2 = Circle(180, 94, 5, fill='mediumSpringGreen', opacity = 50)
+ornament3 = Circle(145,250,5, fill='gold', opacity = 50)
+ornament4 = Circle(152,190,5, fill='aqua', opacity = 50)
+ornament5 = Circle(206,203,5, fill='crimson', opacity = 50)
+ornament6 = Circle(220,80,5, fill='mediumSpringGreen', opacity = 50)
+ornament7 = Circle(257,255,5, fill='hotpink', opacity = 50)
+ornament8 = Circle(270,204,5, fill='magenta', opacity = 50)
+ornament9 =Circle(191,268,5, fill='yellow', opacity = 50)
+ornament10 = Circle(183, 153, 5, fill='orange', opacity = 50)
+
+
+
+
+
+
+
+
+#Man
+head = Oval(200, 120, 30, 50, fill=gradient('navajowhite', 'sandyBrown'), visible = False)
+legLeft = Line(190, 280, 175, 325, lineWidth = 10, visible=False, fill=gradient('darkGreen', 'olive', 'darkGreen', start='right'))
+legRight = Line(210, 280, 220, 325, lineWidth = 10, visible=False, fill=gradient('darkGreen', 'olive', 'darkGreen', start='left'))
+eyeLeft = Circle(195, 115, 2, visible = False)
+eyeRight = Circle(205, 115, 2, visible = False)
+armLeft = Line(150, 170, 96, 242, fill=gradient('darkGreen','green'), visible = False, lineWidth = 5)
+armRight = Line(250, 170, 332, 100, fill=gradient('darkGreen','green'), visible = False, lineWidth = 5)
+mouth = Oval(200, 133, 10, 4, visible = False)
+def onMousePress (x, y):
+        head.visible = True
+        legLeft.visible = True
+        legRight.visible = True
+    
+        treeStump.visible = False
+    
+        eyeLeft.visible = True
+        eyeRight.visible = True
+        armLeft.visible = True
+        armRight.visible = True
+        ornament1.opacity = 100
+        ornament2.opacity = 100
+        ornament3.opacity = 100
+        ornament4.opacity = 100
+        ornament5.opacity = 100
+        ornament6.opacity = 100
+        ornament7.opacity = 100
+        ornament8.opacity = 100
+        ornament9.opacity = 100
+        ornament10.opacity = 100
+        mouth.visible = True
+def onMouseRelease (x, y):
+        head.visible = False
+        legLeft.visible = False
+        legRight.visible = False
+    
+        treeStump.visible = True
+    
+        eyeLeft.visible = False
+        eyeRight.visible = False
+        armLeft.visible = False
+        armRight.visible = False
+        ornament1.opacity = 50
+        ornament2.opacity = 50
+        ornament3.opacity = 50
+        ornament4.opacity = 50
+        ornament5.opacity = 50
+        ornament6.opacity = 50
+        ornament7.opacity = 50
+        ornament8.opacity = 50
+        ornament9.opacity = 50
+        ornament10.opacity = 50
+        mouth.visible = False
+    
+#Snow
+Oval(60,330,50,20, fill=gradient ('white','lightblue', start='top-left'))
+Oval(130,345,70, 30, fill=gradient ('white','lightblue', start='top-right'))
+Oval(300,340,80,20, fill=gradient ('white','lightblue', start='top-right'))
+Oval(220,365,90, 25, fill=gradient ('white','lightblue', start='top-right'))
+Oval(60,355,85, 20, fill=gradient ('white','lightblue', start='top-left'))
+Oval(325,370,75,25, fill=gradient ('white','lightblue', start='top-left'))
+Oval(130,375,90,20, fill=gradient ('white','lightblue', start='top-right'))
+Oval(225,333,75,25, fill=gradient ('white','lightblue', start='top-right'))
+
+
+#SnowFall
+Circle(48, 72, 3, fill=gradient ('white','lightblue', start='top-left'))
+Circle(89, 131, 3, fill=gradient ('white','lightblue', start='top-left'))
+Circle(123, 58, 3, fill=gradient ('white','lightblue', start='top-left'))
+Circle(26, 196, 3, fill=gradient ('white','lightblue', start='top-left'))
+Circle(279, 38, 3, fill=gradient ('white','lightblue', start='top-left'))
+Circle(351, 117, 3, fill=gradient ('white','lightblue', start='top-left'))
+Circle(299, 149, 3, fill=gradient ('white','lightblue', start='top-left'))
+
+
+Circle(61, 227, 3, fill=gradient ('white','lightblue', start='top-left'))
+Circle(360, 245, 3, fill=gradient ('white','lightblue', start='top-left'))
+Circle(363, 211, 3, fill=gradient ('white','lightblue', start='top-left'))
+Circle(374, 280, 3, fill=gradient ('white','lightblue', start='top-left'))
+Circle(316, 235, 3, fill=gradient ('white','lightblue', start='top-left'))
+Circle(339, 295, 3, fill=gradient ('white','lightblue', start='top-left'))
+Circle(65, 297, 3, fill=gradient ('white','lightblue', start='top-left'))
