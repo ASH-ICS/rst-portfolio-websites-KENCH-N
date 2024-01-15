@@ -1,0 +1,33 @@
+﻿#Background
+app.background = gradient('paleGoldenRod','darkOrange','darkRed', start='bottom')
+sun = Star(200,277,60,300, fill='gold')
+suN = Star(200,277,70,150, opacity=40, fill='orange')
+
+
+Polygon(0,370, 0,351, 14,341, 52,337, 86,346, 132,343, 191,344, 237,337, 254,329, 297,327, 348,339, 400,344, 400,370)
+Rect(0,370, 400,30, fill='black')
+
+
+#Grave
+Line(297, 357, 297, 210, lineWidth=15)
+Line(250, 250, 345, 250, lineWidth=15)
+
+
+Line(190,275,190,350, lineWidth=12)
+Line(162,300,220,295, lineWidth=12)
+
+
+#Poppies
+Star(190,300, 12, 5, fill='red', roundness=85)
+Circle(190,300,3)
+
+
+Star(297,250, 15, 5, fill='red', roundness=85)
+Circle(297,250,5)
+
+
+
+
+def onMousePress(x,mouseY):
+        sun.centerY= mouseY
+        suN.centerY= mouseY
