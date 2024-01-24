@@ -76,6 +76,29 @@
     background-image: url('images/BackgroundIndex.jpg');
     background-repeat: repeat-y;
   }
+
+  .gap {
+    line-height: 3;
+  }
+
+  * {
+  box-sizing: border-box;
+}
+
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; 
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear:
+
 </style>
 
 <body>
@@ -119,24 +142,34 @@
 
   <body>
     <center>
-      <h1 style="font-size: 30px; font-family: Verdana;">Tech Tuesday</h1>
+      <h1 class='gap'style="font-size: 30px; font-family: Verdana;">Tech Tuesday</h1>
 
-      <p style='font-size:20px; font-family: Verdana;'>Tech Tuesday 1</p>
-      <p style='font-size:17px; font-family: Verdana;'><a href=TechTuesday.pdf>PDF</a></p>
-      <p style='font-size:20px; font-family: Verdana;'>Tech Tuesday 2</p>
-      <p style='font-size:17px; font-family: Verdana;'><a href=TechTuesday2.pdf>PDF</a></p>
-      <p style='font-size:20px; font-family: Verdana;'>Tech Tuesday 3</p>
-      <p style='font-size:17px; font-family: Verdana;'><a href=TechTuesday3.pdf>PDF</a></p>
-      <p style='font-size: 20px; font-family: Verdana;'>Tech Tuesday 5</p>
-      <p style='font-size:17px; font-family: Verdana;'><a href=TechTuesday5.pdf>PDF</a></p>
-      <p style='font-size: 20px; font-family: Verdana;'>Tech Tuesday 6</p>
-      <p style='font-size:17px; font-family: Verdana;'><a href=TechTuesday6.pdf>PDF</a></p>
+      <div class="row">
+        <div class="column" style="background-color:transparent;">
+          <p style='font-size:20px; font-family: Verdana;'>Tech Tuesday 1</p>
+          <p style='font-size:17px; font-family: Verdana;'><a href=TechTuesday.pdf>PDF</a></p>
+          <p style='font-size:20px; font-family: Verdana;'>Tech Tuesday 2</p>
+          <p style='font-size:17px; font-family: Verdana;'><a href=TechTuesday2.pdf>PDF</a></p>
+          <p style='font-size:20px; font-family: Verdana;'>Tech Tuesday 3</p>
+          <p style='font-size:17px; font-family: Verdana;'><a href=TechTuesday3.pdf>PDF</a></p>
+          </div>
+          <div class="column" background-color: transparent;>
+            <p style='font-size:20px; font-family: Verdana;'>Tech Tuesday 4</p>
+            <p style='font-size:17px; font-family: Verdana;'><a href=TechTuesday4.pdf>PDF</a></p>
+            <p style='font-size: 20px; font-family: Verdana;'>Tech Tuesday 5</p>
+            <p style='font-size:17px; font-family: Verdana;'><a href=TechTuesday5.pdf>PDF</a></p>
+            <p style='font-size: 20px; font-family: Verdana;'>Tech Tuesday 6</p>
+            <p style='font-size:17px; font-family: Verdana;'><a href=TechTuesday6.pdf>PDF</a></p>
+            </div>
+            <div class="column" background-color: transparent;>
       <p style='font-size: 20px; font-family: Verdana;'>Tech Tuesday 7</p>
       <p style='font-size:17px; font-family: Verdana;'><a href=TechTuesday7.pdf>PDF</a></p>
       <p style='font-size: 20px; font-family: Verdana;'>Tech Tuesday 8</p>
       <p style='font-size: 17px; font-family: Verdana;'><a href=TechTuesday8.pdf>PDF</a></p>
       <p style='font-size: 20px; font-family: Verdana;'>Tech Tuesday 9</p>
       <p style='font-size: 17px; font-family: Verdana;'><a href=TechTuesday9.pdf>PDF</a></p>
+      </div>
+      </div>
     </center>
 
 
