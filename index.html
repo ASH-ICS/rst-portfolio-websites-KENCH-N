@@ -85,6 +85,34 @@
     font-family: Verdana; 
     font-size: 50px;
   }
+
+  * {
+  box-sizing: border-box;
+    }
+
+    .column {
+  float: left;
+  width: 30%;
+  padding: 10px;
+
+  padding-top: 100px;
+    }
+
+    .row:after {
+  content: "";
+  display: table;
+  clear: both;
+    }
+
+    function myMap() {
+      var mapProp = {
+        center: new google.maps.LatLng(51.508742, -0.120850),
+        zoom: 5,
+      };
+      var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+    }
+
+
 </style>
 
 <body>
@@ -128,9 +156,25 @@
   <center>
     <h1 style="font-family: Verdana; font-size: 50px;">Welcome to Ken's Website</h1>
   <p class = "biggap">
-    About Me <br>
 </p>
 </center>
-  <p style="font-family: Verdana; font-size: 30px; padding-left: 25px;">Ken Chen</p>
+  <div class="row">
+    <div class="column">
+  <p style="font-family: Verdana; font-size: 30px; padding-left: 110px;">Ken Chen</p>
+  <img src="images/KenChen-transformed.jpeg" width=340px height=500px style="padding:30px; border-radius: 15%; box-shadow: 4px 8px 0px 0px;">
+  </div>
+  <div class="column">
+    <p style="font-family: Verdana; font-size: 30px; padding-top: 150px;">Email: <a href="malito: ken.chen@stu.ocsb.ca">ken.chen@stu.ocsb.ca</a></p>
+    <p style="font-family: Verdana; font-size: 30px;">Class: ICD2O</p>
+    <p style="font-family: Verdana; font-size: 30px;">Teacher: Mr. Jamieson</p>
+  </div>
+  <div class="column">
+    <p style="font-family: Verdana; font-size: 30px; padding-top: 150px">School: </p>
+    <p style="font-family: Verdana; font-size: 30px;">All Saints Catholic High School</p>
+    <div id="googleMap" style="width:100%;height:400px;">
+      <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+    </div>
+  </div>
+  </div>
 </body>
 </html>
