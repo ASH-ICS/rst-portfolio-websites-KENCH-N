@@ -1,0 +1,301 @@
+﻿#main menu functions
+
+
+app.mainMenu = True
+app.start = False
+app.settings = False
+app.instruct = False
+
+
+menu = Group(
+        Rect(0, 0, 400, 400, fill='sandyBrown'),
+        Label('Falling Blocks', 200, 60, size=40, font='monospace', bold=True),
+        visible = False
+        )
+
+
+app.startbutton = Group(
+        Rect(140, 160, 120, 60, fill='chocolate', border='brown', borderWidth=6),
+        Label('Start', 200, 190, size=25, italic = True, font='caveat'),
+        visible = False
+        )
+
+
+app.settings = Group(
+        Rect(140, 240, 120, 60, fill='chocolate', border='brown', borderWidth=6),
+        Label('Settings',200, 270, size=25, italic = True, font='caveat'),
+        visible = False
+        )
+
+
+app.instructions = Group(
+        Rect(140, 320, 120, 60, fill='chocolate', border='brown', borderWidth=6),
+        Label('Instructions', 200, 350, size=25, italic = True, font='caveat'),
+        visible = False
+        )
+
+
+app.instructPage = Group(
+        Rect(0, 0, 400, 400, fill='sandyBrown'),
+        Label('Instructions', 200, 60, size=35, font='monospace', bold=True),
+        Label('Click Start to Play', 200, 140, size=11),
+        Label('Click Settings to Switch Controling Options', 200, 160, size=11),
+        Label('Default Movement Option is Mouse', 200, 180, size=11),
+        Label('Move Mouse Side to Side to Move Player', 200, 200,size=11),
+        Label('There Will Be Blocks Falling From the Sky, ', 200, 220, size=11),
+        Label('As Rounds Increase the Amount of Blocks Falling Increase as Will as its Speed', 200, 235, size=11),
+        Label('Try to Avoid these Blocks and Try to get as Far as Possbile Touching Them', 200, 255, size=11),
+        Label('Pickup Randomly Spawning Powerups, picked up ones will show below the player', 200, 275, size=11),
+        Label('Click Left Mouse Button to Use', 200, 295, size=11),
+        Label('After Powerup Usuage a 5 Second Countdown Will Begin Indicating Time Left', 200, 315, size=11),
+        Label('P to pause O to unpause', 200, 335, size =11),
+        Label('Round Counter Top Left Indicating Which Round It Is', 200, 355, size=11),
+        visible = False
+        )
+
+
+app.instructArrow = RegularPolygon(30, 35, 10, 3, rotateAngle = -90, visible = False)
+
+
+
+
+pointer = Circle(0, 0, 1, opacity = 0)
+
+
+#Settings var
+
+
+app.keyhold = False
+app.settingsPage = Group(
+        Rect(0, 0, 400, 400, fill='sandyBrown'),
+        Label('Settings', 200, 60, size=35, font='monospace', bold=True),
+        Label('Drag Bar From Mouse Movement to Key Movement to Switch Movement Type', 200, 120, size=11),
+        Label('Mouse Movement', 100, 160, size = 20),
+        Label('Key Movement', 300, 160, size = 20),
+        visible = False
+        )
+app.SettingsCB = Rect(80, 200, 240, 20, fill='red', border = 'black', borderWidth = 3, visible = False)
+app.SettingsDrag = Rect(80, 200, 30, 20, visible = False)
+app.SettingsBack = RegularPolygon(30, 35, 10, 3, rotateAngle = -90, visible = False)
+
+
+#Game variables
+app.player = Circle(200, 320, 15, visible = False)
+app.gameStart = False
+app.ground = Rect(0, 335, 400, 65, fill='sandybrown', border='maroon', borderWidth = 5, visible = False)
+app.vx = 0
+obs = Group()
+obs.vy = 10
+app.gameLevel = 1
+app.gameLevelProg = 0
+app.dropCounter = 1
+app.gamelvlrq = 0
+obs.time = 0
+app.num = 0
+app.roundcounter = Label(app.gameLevel, 45, 35, size = 40, font='monospace', visible = False)
+#Pause game
+app.pause = Line(378, 30, 350, 30, lineWidth = 20, dashes=(8, 8), visible = False)
+app.pauseGameScreen = Group(
+        Rect(0, 0, 400 ,400, fill='Grey', opacity = 50, visible = False),
+        visible = False
+        )
+app.pauseGame = False
+
+
+#Game end var
+app.gameLose = False
+app.restartScreen = Group(
+        Rect(0, 0, 400, 400),
+        Label('You Lost', 200, 60, size = 40, font = 'monospace', fill='white'),
+        Label('Click run to restart', 200, 100, size = 20, font='monospace', fill='white')
+        )
+
+
+#Power up var
+app.powerup = Group()
+app.powerupspawn = False
+app.invincibility = 0
+app.timer = 0
+app.poweruphud = Group()
+app.xs = 0
+#Powerup Counter
+app.powerupbuff = Rect(340, 20, 40, 40, border='black', borderWidth=3, fill='white', visible = False)
+app.powerupCounter = Label(app.invincibility, 360, 40, font = 'monospace', size = 40, bold = True, visible = False)
+#debug menu
+
+
+#Functions
+
+
+def onMousePress(mouseX, mouseY):
+        #initiate clicking
+        if app.mainMenu or app.gameLose == True:
+            pointer.centerX = mouseX
+            pointer.centerY = mouseY
+        #Uses powerups
+        if app.gameStart == True:
+            if app.mainMenu == False:
+                for powerup in app.poweruphud:
+                    app.poweruphud.remove(powerup)
+                    app.invincibility = 150
+                    app.xs -= 3
+                    
+            
+def onMouseDrag(mouseX, mouseY):
+        #settings control switch
+        if app.settingsPage.visible == True:
+            if mouseY >= 200:
+                if mouseY <= 220:
+                    app.SettingsDrag.centerX = mouseX
+                    if app.SettingsDrag.centerX > 200:
+                        app.SettingsDrag.centerX += 105
+                        app.SettingsCB.fill = 'green'
+                        app.keyhold = True
+                    if app.SettingsDrag.centerX < 200:
+                        app.SettingsDrag.centerX -= 105
+                        app.SettingsCB.fill = 'red'
+                        app.keyhold = False
+                        pass
+                    if app.SettingsDrag.centerX < 95:
+                        app.SettingsDrag.centerX = 95
+                    if app.SettingsDrag.centerX > 305:
+                        app.SettingsDrag.centerX = 305
+    
+def onMouseMove(mouseX, mouseY):
+        if app.gameStart == True:
+            if app.keyhold == False:
+                app.player.centerX = mouseX
+
+
+def onKeyHold (key):
+        if app.gameStart == True and app.mainMenu == False:
+            if app.keyhold == True:
+                if 'a' in key:
+                    app.vx = -10
+                if 'd' in key:
+                    app.vx = 10
+            if 'p' in key:
+                app.pauseGame = True
+            if 'o' in key:
+                app.pauseGame = False
+                    
+def onKeyRelease (key):
+        if 'a' in key:
+            app.vx = 0
+        if 'd' in key:
+            app.vx = 0
+        pass
+
+
+def onStep():
+        #If obstacle is touched
+        if app.gameLose == True:
+            app.restartScreen.visible = True
+        #main menu
+        if app.gameLose == False:
+            if app.mainMenu == True:
+                app.restartScreen.visible = False
+                menu.visible = True
+                app.startbutton.visible = True
+                app.settings.visible = True
+                app.instructions.visible = True
+                app.instructArrow.visible = False
+                #Where clicking happens
+                if app.settingsPage.visible == False and app.instructPage.visible == False:
+                    if pointer.hitsShape(app.startbutton):
+                        app.mainMenu = False
+                        app.gameStart = True
+                if app.instructPage.visible == False:
+                    if pointer.hitsShape(app.settings):
+                        app.settingsPage.visible = True
+                if pointer.hitsShape(app.instructions):
+                    app.instructPage.visible = True
+            #hides main menu when start is clicked
+            if app.mainMenu == False:
+                menu.visible = False
+                app.startbutton.visible = False
+                app.settings.visible = False
+                app.instructions.visible = False
+            #back arrow instructions page    
+            if app.instructPage.visible == True:
+                app.instructArrow.visible = True
+            if pointer.hitsShape(app.instructArrow):
+                app.instructPage.visible = False
+            #Settings page
+            if app.settingsPage.visible == True:
+                app.SettingsCB.visible = True
+                app.SettingsDrag.visible = True
+                app.SettingsBack.visible = True
+                if pointer.hitsShape(app.SettingsBack):
+                    app.settingsPage.visible = False
+            else:
+                app.SettingsCB.visible = False
+                app.SettingsDrag.visible = False
+                app.SettingsBack.visible = False
+            #what if game started
+            if app.gameStart == True:
+                if app.mainMenu == False:
+                    app.roundcounter.visible = True
+                    app.roundcounter.value = app.gameLevel
+                    if app.pauseGame == True:
+                        app.pause.visible = True
+                        app.pauseGameScreen.visible = True
+                    else:
+                        app.pause.visible = False
+                        app.pauseGameScreen.visible = False
+                    if app.invincibility > 0:
+                        app.invincibility -= 1
+                        app.powerupCounter.value = rounded(app.invincibility / 30)
+                        app.powerupCounter.visible = True
+                        app.powerupbuff.visible = True
+                    app.timer = randrange(1000)
+                    app.player.visible = True
+                    app.ground.visible = True
+                    app.player.centerX += app.vx
+                    #ball fall spawn
+                    app.gamelvlrq = (app.gameLevel + 4) * 1.2
+                    if obs.time == 0:
+                        app.num = randrange(10, 25)
+                        app.timer = randrange(3)
+                    if app.dropCounter <= app.gameLevel:
+                        obs.time += 1
+                        if obs.time == app.num:
+                            obs.add(Circle(randrange(10, 400), -10, 10))
+                            app.dropCounter += 1
+                            obs.time = 0
+                    #ball falling motion
+                    for obstacle in obs:
+                        obstacle.centerY += obs.vy
+                        if app.invincibility == 0:
+                            if obstacle.hitsShape(app.player):
+                                app.gameLose = True
+                                app.powerup.visible = False
+                                app.poweruphud.visible = False
+                        if obstacle.hitsShape(app.ground):
+                            obs.remove(obstacle)
+                            app.gameLevelProg += 1
+                            app.dropCounter -= 1
+                        if app.gameLevelProg > app.gamelvlrq:
+                            app.gameLevel += 1
+                            app.gameLevelProg = 0
+                            obs.vy *= 1.2
+                    #Spawn powerups                
+                    if app.timer == 5:
+                        if app.xs < 3:
+                            for i in range(1):
+                                app.powerup.add(Rect(randrange(10, 390), 315, 20, 20, fill='red'))
+                                app.xs += 3
+                    if app.invincibility <= 0:
+                        app.invincibility = 0
+                        app.powerupCounter.visible = False
+                        app.powerupbuff.visible = False
+                    #Adds powerups to hud    
+                    for powerup in app.powerup:
+                        for j in range(1):
+                            if app.powerup.hitsShape(app.player):
+                                app.powerup.remove(powerup)
+                                if app.xs <= 3:
+                                    app.poweruphud.add(Rect(10*app.xs, 360, 20, 20, fill='red'))
+                else:
+                    app.player.visible = False
+                    app.ground.visible = False
