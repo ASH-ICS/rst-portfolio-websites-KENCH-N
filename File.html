@@ -83,6 +83,26 @@
     .gap {
     line-height: 3;
   }
+
+  * {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  padding: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+  h1 {
+    column-span: all;
+  }
   </style>
 
   <body>
@@ -127,17 +147,24 @@
 
   <body>
     <center>
+
        <h1 class='gap' style="font-size: 30px; font-family: Verdana;">Links</h1>
-      <p style="font-size: 20px"><a href=https://all-saints-hs.typingclub.com/sportal>Typing Club</a></p>
-
-      <p style="font-size: 20px"><a href=https://mystudentdashboard.com/#/workspace/w/64ee0ed3312198710afa25eb>Tech Hapara Workspace</a></p>
-
+       <div class='row'>
+        <div class='column'>
+      <p style="font-size: 20px"><a href=https://all-saints-hs.typingclub.com>Typing Club</a></p>
+      <embed src="https://all-saints-hs.typingclub.com" width="400px" height="600px">
+        <p style="font-size: 20px"><a href=https://mystudentdashboard.com/#/workspace/w/64ee0ed3312198710afa25eb>Tech Hapara Workspace</a></p>
+      </div>
+    <div class="column">
       <p style="font-size: 20px"><a href=https://www.w3schools.com/html/default.asp>W3Schools</a></p>
-    </center>
-    <center>
-      <p style="font-size: 20px"><a href=https://academy.cs.cmu.edu/course/cs0-21>CMU</a></p>
+      <iframe src="https://www.w3schools.com/" width="400px" height="600px">
+      </div>
+  <div class="column">
       <p style='font-size: 20px'><a href=https://sites.google.com/ocsb.ca/jamieson-ics/home>Mr. Jamieson Website</a></p>
+      <p style="font-size: 20px"><a href=https://academy.cs.cmu.edu/course/cs0-21>CMU</a></p>
+      </div>
     </center>
+  </div>
   </body>
 
 </html>
