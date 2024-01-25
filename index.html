@@ -82,39 +82,50 @@
 
   p.biggap {
     line-height: 3;
-    font-family: Verdana; 
+    font-family: Verdana;
     font-size: 50px;
   }
 
   * {
-  box-sizing: border-box;
-    }
+    box-sizing: border-box;
+  }
 
-    .column {
-  float: left;
-  width: 30%;
-  padding: 10px;
+  .column {
+    float: left;
+    width: 30%;
+    padding: 10px;
 
-  padding-top: 100px;
-    }
+    padding-top: 100px;
+  }
 
-    .row:after {
-  content: "";
-  display: table;
-  clear: both;
-    }
-
-    function myMap() {
-      var mapProp = {
-        center: new google.maps.LatLng(51.508742, -0.120850),
-        zoom: 5,
-      };
-      var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-    }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
 
 </style>
+<script>
+  function initMap() {
+    var myLatLng= {
+      lat: 45.321893660542486, lng: -75.92509485893727
+    }
 
+    ;
+
+    var map=new google.maps.Map(document.getElementById('map'), {
+      zoom: 4,
+      center: myLatLng
+    });
+
+  var marker=new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Hello World!'
+  });
+  }
+</script>
 <body>
   <ul>
     <li>
@@ -155,26 +166,28 @@
   </ul>
   <center>
     <h1 style="font-family: Verdana; font-size: 50px;">Welcome to Ken's Website</h1>
-  <p class = "biggap">
-</p>
-</center>
+    <p class="biggap">
+    </p>
+  </center>
   <div class="row">
     <div class="column">
-  <p style="font-family: Verdana; font-size: 30px; padding-left: 110px;">Ken Chen</p>
-  <img src="images/KenChen-transformed.jpeg" width=340px height=500px style="padding:30px; border-radius: 15%; box-shadow: 4px 8px 0px 0px;">
-  </div>
-  <div class="column">
-    <p style="font-family: Verdana; font-size: 30px; padding-top: 150px;">Email: <a href="malito: ken.chen@stu.ocsb.ca">ken.chen@stu.ocsb.ca</a></p>
-    <p style="font-family: Verdana; font-size: 30px;">Class: ICD2O</p>
-    <p style="font-family: Verdana; font-size: 30px;">Teacher: Mr. Jamieson</p>
-  </div>
-  <div class="column">
-    <p style="font-family: Verdana; font-size: 30px; padding-top: 150px">School: </p>
-    <p style="font-family: Verdana; font-size: 30px;">All Saints Catholic High School</p>
-    <div id="googleMap" style="width:100%;height:400px;">
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWQQst-VdnsPdqo_2bH7cd4rq-7li39s8&callback=myMap"></script>
+      <p style="font-family: Verdana; font-size: 30px; padding-left: 110px;">Ken Chen</p>
+      <img src="images/KenChen-transformed.jpeg" width=340px height=500px
+        style="padding:30px; border-radius: 15%; box-shadow: 4px 8px 0px 0px;">
+    </div>
+    <div class="column">
+      <p style="font-family: Verdana; font-size: 30px; padding-top: 150px;">Email: <a
+          href="malito: ken.chen@stu.ocsb.ca">ken.chen@stu.ocsb.ca</a></p>
+      <p style="font-family: Verdana; font-size: 30px;">Class: ICD2O</p>
+      <p style="font-family: Verdana; font-size: 30px;">Teacher: Mr. Jamieson</p>
+    </div>
+    <div class="column">
+      <p style="font-family: Verdana; font-size: 30px; padding-top: 150px">School: </p>
+      <p style="font-family: Verdana; font-size: 30px;">All Saints Catholic High School</p>
+      <div id="map" style="height:300px; width:100%;"></div>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWQQst-VdnsPdqo_2bH7cd4rq-7li39s8&callback=initMap"></script>
     </div>
   </div>
-  </div>
 </body>
+
 </html>
